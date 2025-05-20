@@ -1,0 +1,10 @@
+services:
+  html-app:
+    image: html-site:1.0
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8081:80"
+    volumes:
+      - .:/usr/share/nginx/html:ro  # Mount current folder as read-only
